@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | iPhoneMart</title>
+  <link rel="stylesheet" href="landing.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>
+
+
+  <style>
+    /* landing.css - Premium landing page with overlay, animation & responsive design */
+
+:root {
+  --primary: #00b4d8;
+  --secondary: #ff6f61;
+  --text-light: #e8f0fe;
+  --muted: #b8c1d9;
+  --radius: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  background: #0a0f1e;
+}
+
+.landing-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('assets/Screenshot\ \(138\).png') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(10, 15, 30, 0.8));
+  backdrop-filter: blur(3px);
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--text-light);
+  max-width: 600px;
+  padding: 20px;
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 18px;
+  animation: float 4s ease-in-out infinite;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+
+h1 span {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Enter button */
+.enter-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 25px rgba(0, 180, 216, 0.3);
+}
+.enter-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 35px rgba(255, 111, 97, 0.4);
+}
+
+/* Social icons */
+.socials {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social {
+  color: var(--text-light);
+  font-size: 1.3rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social:hover {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Reveal fade */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+  .logo {
+    width: 80px;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+  <div class="landing-container">
+    <div class="overlay"></div>
+    <div class="content reveal">
+      
+      <h1>Welcome to <span>iPhoneMart</span></h1>
+      <p>Your trusted destination for premium refurbished iPhones and accessories — tested, verified, and delivered fast.</p>
+      <a href="main.html" class="enter-btn">Get Started</a>
+
+      <div class="socials">
+       <a href="https://facebook.com" target="_blank" class="social">
+  <i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a href="https://instagram.com" target="_blank" class="social">
+  <i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://x.com" target="_blank" class="social">
+  <i class="fa-brands fa-x-twitter"></i>
+</a>
+
+        <a href="https://wa.me/27611234567?text=Hi!%20I'm%20interested%20in%20your%20iPhones" class="social"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    // Simple reveal on load
+    window.addEventListener("load", () => {
+      document.querySelector(".reveal").classList.add("show");
+    });
+  </script>
+</body>
+</html>

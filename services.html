@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — iPhoneMart</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00b4d8',
+            secondary: '#ff6f61',
+            'muted-txt': '#9fb0c8'
+          },
+          borderRadius: {
+            'lg-2': '16px'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <style>
+    body { font-family: 'Poppins', system-ui, sans-serif; }
+    .img-radius { border-radius: 12px; object-fit: cover; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-[#081428] to-[#071226] text-slate-100">
+
+  <!-- Header -->
+  <header class="backdrop-blur-md bg-white/3 border-b border-white/5 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-black font-bold shadow-lg">IM</div>
+        <div>
+          <div class="text-lg font-extrabold leading-none">iPhoneMart</div>
+          <div class="text-xs text-muted-txt -mt-1">Premium iPhones & Accessories</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-sm hover:text-primary transition">Home</a>
+        <a href="about.html" class="text-sm hover:text-primary transition">About</a>
+        <a href="services.html" class="text-sm text-primary font-semibold">Services</a>
+        <a href="products.html" class="text-sm hover:text-primary transition">Products</a>
+        <a href="blog.html" class="text-sm hover:text-primary transition">Blog</a>
+        <a href="contact.html" class="text-sm hover:text-primary transition">Contact</a>
+        <a href="landing.html" class="ml-3 inline-block bg-gradient-to-r from-primary to-secondary px-4 py-2 rounded-full text-black font-semibold shadow-sm">Buy Now</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="mobileBtnS" class="p-2 rounded-md bg-white/5"><i class="fa fa-bars"></i></button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenuS" class="md:hidden max-w-6xl mx-auto px-5 pb-4 hidden">
+      <div class="flex flex-col gap-3 mt-2 bg-white/3 p-4 rounded-lg border border-white/5">
+        <a href="index.html" class="py-2 px-3 rounded hover:bg-white/5">Home</a>
+        <a href="about.html" class="py-2 px-3 rounded hover:bg-white/5">About</a>
+        <a href="services.html" class="py-2 px-3 rounded bg-white/5 text-primary">Services</a>
+        <a href="products.html" class="py-2 px-3 rounded hover:bg-white/5">Products</a>
+        <a href="blog.html" class="py-2 px-3 rounded hover:bg-white/5">Blog</a>
+        <a href="contact.html" class="py-2 px-3 rounded hover:bg-white/5">Contact</a>
+        <a href="landing.html" class="py-2 px-3 rounded bg-gradient-to-r from-primary to-secondary text-black text-center font-semibold">Buy Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative bg-[url('./assets/iphone4.jpg')] bg-cover bg-center py-28">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="max-w-6xl mx-auto px-5 relative z-10 text-center text-white">
+      <h1 class="text-4xl md:text-5xl font-extrabold">Our Services</h1>
+      <p class="mt-4 text-muted-txt max-w-3xl mx-auto">
+        We don’t just sell devices — we offer expert repairs, trade-ins, diagnostics, and business solutions that keep you connected and confident.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3 justify-center">
+        <a href="products.html" class="px-5 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-black font-semibold">Explore Products</a>
+        <a href="contact.html" class="px-5 py-3 rounded-full border border-white/20 text-white hover:bg-white/5">Contact Support</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <main class="max-w-6xl mx-auto px-5 py-16 space-y-16">
+    <section>
+      <h2 class="text-center text-3xl font-bold mb-10">What We Offer</h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Card -->
+        <div class="bg-white/4 rounded-2xl border border-white/5 p-6 hover:-translate-y-2 hover:shadow-lg transition">
+          <div class="w-12 h-12 rounded-lg bg-primary text-black grid place-items-center mb-4"><i class="fas fa-sync-alt"></i></div>
+          <h3 class="text-xl font-semibold mb-2">Trade-in & Upgrade</h3>
+          <p class="text-muted-txt mb-3">Get instant valuation for your old device and upgrade to the latest model effortlessly.</p>
+          <ul class="list-disc list-inside text-sm text-muted-txt space-y-1">
+            <li>Instant online valuation</li>
+            <li>Same-day appointments</li>
+            <li>Secure data wipe</li>
+          </ul>
+        </div>
+
+        <div class="bg-white/4 rounded-2xl border border-white/5 p-6 hover:-translate-y-2 hover:shadow-lg transition">
+          <div class="w-12 h-12 rounded-lg bg-primary text-black grid place-items-center mb-4"><i class="fas fa-tools"></i></div>
+          <h3 class="text-xl font-semibold mb-2">Repairs & Diagnostics</h3>
+          <p class="text-muted-txt mb-3">From screen replacements to water damage, handled by certified technicians with transparency.</p>
+          <ul class="list-disc list-inside text-sm text-muted-txt space-y-1">
+            <li>Original parts available</li>
+            <li>Test bench diagnostics</li>
+            <li>Pickup & delivery options</li>
+          </ul>
+        </div>
+
+        <div class="bg-white/4 rounded-2xl border border-white/5 p-6 hover:-translate-y-2 hover:shadow-lg transition">
+          <div class="w-12 h-12 rounded-lg bg-primary text-black grid place-items-center mb-4"><i class="fas fa-briefcase"></i></div>
+          <h3 class="text-xl font-semibold mb-2">Business & Fleet Solutions</h3>
+          <p class="text-muted-txt mb-3">Device procurement, staging, and lifecycle management for businesses of any scale.</p>
+          <ul class="list-disc list-inside text-sm text-muted-txt space-y-1">
+            <li>MDM installation & setup</li>
+            <li>Bulk procurement discounts</li>
+            <li>Ongoing maintenance support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE -->
+    <section class="space-y-6">
+      <h3 class="text-center text-2xl font-bold">Why Partner with iPhoneMart?</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white/4 p-5 rounded-xl text-center border border-white/5">
+          <i class="fas fa-shield-alt text-primary text-2xl"></i>
+          <p class="mt-3 text-muted-txt">Certified and verified repair services</p>
+        </div>
+        <div class="bg-white/4 p-5 rounded-xl text-center border border-white/5">
+          <i class="fas fa-user-tie text-primary text-2xl"></i>
+          <p class="mt-3 text-muted-txt">Professional technicians & consultants</p>
+        </div>
+        <div class="bg-white/4 p-5 rounded-xl text-center border border-white/5">
+          <i class="fas fa-bolt text-primary text-2xl"></i>
+          <p class="mt-3 text-muted-txt">Fast turnaround time & delivery</p>
+        </div>
+        <div class="bg-white/4 p-5 rounded-xl text-center border border-white/5">
+          <i class="fas fa-hand-holding-heart text-primary text-2xl"></i>
+          <p class="mt-3 text-muted-txt">Customer-focused service experience</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 pt-10 pb-8 mt-10">
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-4 gap-6">
+      <div>
+        <h3 class="text-xl font-bold text-primary">iPhoneMart</h3>
+        <p class="text-sm text-muted-txt mt-2">Your trusted destination for quality iPhones and accessories.</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-3">Explore</h4>
+        <ul class="text-muted-txt text-sm space-y-2">
+          <li><a href="#shop" class="hover:text-primary">Shop</a></li>
+          <li><a href="#about" class="hover:text-primary">About Us</a></li>
+          <li><a href="#blog" class="hover:text-primary">Blog</a></li>
+          <li><a href="#contact" class="hover:text-primary">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-3">Contact</h4>
+        <ul class="text-muted-txt text-sm space-y-2">
+          <li><a href="mailto:support@iphonemart.example" class="hover:text-primary">support@iphonemart.example</a></li>
+          <li><a href="tel:+27611234567" class="hover:text-primary">+27 61 123 4567</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-3">Follow Us</h4>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 rounded-full border border-white/6 grid place-items-center hover:bg-gradient-to-br from-primary to-secondary text-black"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-white/6 grid place-items-center hover:bg-gradient-to-br from-primary to-secondary text-black"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-white/6 grid place-items-center hover:bg-gradient-to-br from-primary to-secondary text-black"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-6 text-center text-sm text-muted-txt">&copy; 2025 iPhoneMart — All rights reserved.</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const mbS = document.getElementById('mobileBtnS'), mmS = document.getElementById('mobileMenuS');
+    mbS.addEventListener('click', () => mmS.classList.toggle('hidden'));
+
+    // reveal animation
+    const revealItems = document.querySelectorAll('main section, footer');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting)
+          e.target.classList.add('opacity-100','translate-y-0'),
+          e.target.classList.remove('opacity-0','-translate-y-6');
+      });
+    }, { threshold: 0.12 });
+    revealItems.forEach(i => {
+      i.classList.add('opacity-0','-translate-y-6','transition','duration-700');
+      io.observe(i);
+    });
+  </script>
+</body>
+</html>
